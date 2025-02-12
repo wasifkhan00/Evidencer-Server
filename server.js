@@ -12,7 +12,7 @@ app.use(limiter)
 app.all("*", userRoutes);
 
 const connectionURI =
-  "mongodb+srv://wasif:wasif9900@cluster0.pcytu.mongodb.net/EVIDENCES";
+  process.env.DBURL
 
 const startServer = async () => {
   await dbConnect(connectionURI);
