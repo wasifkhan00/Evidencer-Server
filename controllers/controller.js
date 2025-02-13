@@ -1,8 +1,10 @@
+const statusCodes = require("../helpers/statusCodes");
+
 class Controller {
   user(req, resp) {
     console.log("I'm the controller");
 
-    resp.send("Surprise from controller MF");
+    resp.send(statusCodes.OK, "I'm the controller");
   }
 }
 
